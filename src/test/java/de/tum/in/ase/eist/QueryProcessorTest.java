@@ -30,4 +30,12 @@ class QueryProcessorTest {
 		}
 	}
 
+	@Test
+	void array() {
+		String actual = queryProcessor.process("a05971e0: which of the following numbers is the largest: 99, 362, 22, 725");
+		if (!actual.contains("725")) {
+			fail("wrong max int");
+		}
+	}
+
 }
